@@ -43,7 +43,8 @@ class LinkedList:
         prev = None
 
         while node is not None:
+            next = node.next_node
             node.next_node = prev
             prev = node
-            node = node.next_node
-        return node
+            node = next
+        self.head = prev

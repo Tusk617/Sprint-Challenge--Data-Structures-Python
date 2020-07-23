@@ -36,6 +36,8 @@ class BSTNode:
     # Return True if the tree contains the value
     # False if it does not
     def contains(self, target):
+        if self.value == target:
+            return True
         if target < self.value:
             if self.left is None:
                 return False
@@ -68,12 +70,12 @@ class BSTNode:
 
 
     # Call the function `fn` on the value of each node
-    def for_each(self, fn):
-        fn(self.value)
-        if self.left:
-            self.left.for_each(fn)
-        if self.right:
-            self.right.for_each(fn)
+    # def for_each(self, fn):
+    #     fn(self.value)
+    #     if self.left:
+    #         self.left.for_each(fn)
+    #     if self.right:
+    #         self.right.for_each(fn)
 
     # Part 2 -----------------------
 
