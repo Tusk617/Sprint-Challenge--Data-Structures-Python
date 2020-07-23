@@ -14,19 +14,18 @@ f.close()
 duplicates = []  # Return the list of duplicates in this data structure
 
 # Replace the nested for loops below with your improvements
-for name_1 in names_1:
-    if name_1 in names_2:
-       duplicates.append(name_1)
-# BST = BSTNode(names_1[0])
-# for i in names_1[1:]:
-#     print(names_1[1:])
-#     BST.insert(i)
-# duplicates = []
-# for y in names_2:
-#     # print(y)
-#     if BST.contains(y):
-#         # print(y)
-        # duplicates.append(y)
+# for name_1 in names_1:
+#     if name_1 in names_2:
+#        duplicates.append(name_1)
+BST = BSTNode(names_1[0])
+for i in names_1[1:]:
+    BST.insert(i)
+for y in names_2:
+        if BST.contains(y):
+                duplicates.append(y)
+#     for y in names_2:
+#         if BST.contains(y):
+#                 duplicates.append(y)
 
 
 
